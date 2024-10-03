@@ -56,12 +56,24 @@ export default function UserTask() {
     }
   };
 
-  const handleToggleComplete = (id) => {
-    setTasks((prevTasks) =>
-      prevTasks.map((task) =>
-        task.id === id ? { ...task, completed: !task.completed } : task
-      )
-    );
+  const handleToggleComplete = (taskId) => {
+    const updatedTasks = tasks.map(task => {
+      if (task.id === taskId) {
+        return { ...task, completed: !task.completed };
+      }
+      return task;
+    });
+    setTasks(updatedTasks);
+    const newCompletedStatus = !tasks.find(task => task.id === taskId).completed;
+    axios.patch(`http://localhost:3000/tasks/${taskId}`, {
+      completed: newCompletedStatus,
+    })
+    .then(response => {
+      console.log('Task updated:', response.data);
+    })
+    .catch(error => {
+      console.error('Error updating task:', error);
+    });
   };
   
   

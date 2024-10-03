@@ -8,41 +8,20 @@
       "confirmPassword": "Chi@$&99047"
     }
   ],
-  "login": [
-    {
-      "id": "f72d",
-      "email": "chintandhameliya63@gmail.com",
-      "password": "Chi@$&99047"
-    }
-  ],
   "tasks": [
     {
-      "id": "6ea8",
-      "title": "rgt",
-      "description": "retgr",
-      "dueDate": "2024-10-15",
-      "completed": true
-    },
-    {
-      "id": "eed2",
+      "id": "8d12",
       "title": "hello",
-      "description": "werf5t4",
-      "dueDate": "2024-10-15",
+      "description": "ed",
+      "dueDate": "2024-10-23",
       "completed": true
     },
     {
-      "id": "4ae0",
-      "title": "frtg",
-      "description": "rftg5",
-      "dueDate": "2024-10-15",
+      "id": "4905",
+      "title": "hello",
+      "description": "hello",
+      "dueDate": "2024-10-17",
       "completed": false
-    },
-    {
-      "id": "34a3",
-      "title": "rt5",
-      "description": "erft5",
-      "dueDate": "2024-10-30",
-      "completed": true
     }
   ]
 }
