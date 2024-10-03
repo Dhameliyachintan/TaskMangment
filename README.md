@@ -28,3 +28,9 @@ GET /api/tasks/:id: Retrieve a specific task by ID
 PUT /api/tasks/:id: Update a specific task
 
 DELETE /api/tasks/:id: Delete a specific task
+
+# Install dependencies
+npm install
+
+# Running the Application
+npm start
