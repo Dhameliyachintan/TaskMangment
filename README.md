@@ -18,7 +18,11 @@ json-server --watch db.json --port 4000
 
 # API Endpoints
 POST /api/tasks: Create a new task
+
 GET /api/tasks: Retrieve all tasks
+
 GET /api/tasks/:id: Retrieve a specific task by ID
+
 PUT /api/tasks/:id: Update a specific task
+
 DELETE /api/tasks/:id: Delete a specific task
