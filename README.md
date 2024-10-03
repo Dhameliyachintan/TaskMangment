@@ -8,7 +8,7 @@ npm install -g json-server
 # json server commond
 json-server --watch db.json --port 4000
 
-## Features
+# Features
 - **User Authentication**: Secure user login and registration use JWT.
 - **Task Creation**: Easily create new tasks with titles, descriptions, and due dates.
 - **Task Management**: Edit and delete tasks as needed.
