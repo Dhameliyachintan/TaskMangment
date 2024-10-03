@@ -1,0 +1,48 @@
+{
+  "register": [
+    {
+      "id": "39f2",
+      "name": "chintan dhameliya",
+      "email": "chintandhameliya63@gmail.com",
+      "password": "Chi@$&99047",
+      "confirmPassword": "Chi@$&99047"
+    }
+  ],
+  "login": [
+    {
+      "id": "f72d",
+      "email": "chintandhameliya63@gmail.com",
+      "password": "Chi@$&99047"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "6ea8",
+      "title": "rgt",
+      "description": "retgr",
+      "dueDate": "2024-10-15",
+      "completed": true
+    },
+    {
+      "id": "eed2",
+      "title": "hello",
+      "description": "werf5t4",
+      "dueDate": "2024-10-15",
+      "completed": true
+    },
+    {
+      "id": "4ae0",
+      "title": "frtg",
+      "description": "rftg5",
+      "dueDate": "2024-10-15",
+      "completed": false
+    },
+    {
+      "id": "34a3",
+      "title": "rt5",
+      "description": "erft5",
+      "dueDate": "2024-10-30",
+      "completed": true
+    }
+  ]
+}
