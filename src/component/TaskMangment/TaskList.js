@@ -27,7 +27,7 @@ const TaskList = ({ tasks, handleEditTask, handleDeleteTask, handleToggleComplet
                 <td>
                   <button
                     className={`btn btn-sm ${task.completed ? 'btn-success' : 'btn-secondary'}`}
-                    onClick={() => handleToggleComplete(task.id)} // Toggle completion status
+                    onClick={() => handleToggleComplete(task.id)} 
                   >
                     {task.completed ? 'Completed' : 'Incomplete'}
                   </button>
@@ -35,7 +35,7 @@ const TaskList = ({ tasks, handleEditTask, handleDeleteTask, handleToggleComplet
                 <td>
                   <button
                     className="btn btn-info btn-sm mx-3"
-                    onClick={() => handleEditTask(task)} // Call edit function
+                    onClick={() => handleEditTask(task)} 
                   >
                     Edit
                   </button>

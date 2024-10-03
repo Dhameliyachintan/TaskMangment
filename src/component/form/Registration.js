@@ -76,7 +76,7 @@ const Registration = () => {
   return (
     <div className="container mt-5">
       <div className="row justify-content-center">
-        {/* Registration Form Section */}
+
         <div className="col-md-6">
           <h2>Registration Form</h2>
           {errors.general && (

@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const Login = ({isLoggedIn}) => {
+const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState({});
@@ -12,8 +12,8 @@ const Login = ({isLoggedIn}) => {
 
   const validateForm = () => {
     const errors = {};
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Basic email validation regex
-    const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/; // Adjusted regex for password validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+    const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/; 
 
     if (!email.trim()) {
       errors.email = "Email is required";
@@ -65,7 +65,6 @@ const Login = ({isLoggedIn}) => {
 
   return (
     <div className="container mt-5">
-      {/* <ToastContainer /> */}
       <div className="row justify-content-center">
         <div className="col-md-6">
           <div className="card p-4 rounded">
@@ -76,7 +75,7 @@ const Login = ({isLoggedIn}) => {
               <input
                 onChange={(e) => setEmail(e.target.value)}
                 type="email"
-                className={`form-control ${errors.email ? "is-invalid" : ""}`} 
+                className={`form-control ${errors.email ? "is-invalid" : ""}`}
               />
               {errors.email && (
                 <div className="invalid-feedback">{errors.email}</div>

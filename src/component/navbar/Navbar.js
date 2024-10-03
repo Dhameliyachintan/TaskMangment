@@ -50,11 +50,11 @@ export default function Navbar({ onLogout }) {
               </li>
 
             </ul>
-            <div className="flex">
+            {<div className="flex">
               <button className="btn btn-danger" onClick={handleLogout}>
                 Log Out
               </button>
-            </div>
+            </div>}
           </div>
         </div>
       </nav>

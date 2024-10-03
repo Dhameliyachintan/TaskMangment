@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar onLogout={handleLogout}/>
+      <Navbar onLogout={handleLogout} />
       <Routes>
         <Route path="/" element={<Registration setIsLoggedIn={setIsLoggedIn} setMessage={setMessage} />} />
         <Route path="/login" element={<Login />}/>
