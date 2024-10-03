@@ -1,5 +1,7 @@
-# Getting Started with Create React App
+# Task Management Project
+A simple and efficient task management application that allows users to create, manage, and track their tasks.
 
+# Getting Started with Create React App
 This project was TaskMangment with [https://github.com/Dhameliyachintan/TaskMangment.git).
 
 # Install JSON Server globally
