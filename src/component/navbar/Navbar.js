@@ -7,13 +7,12 @@ export default function Navbar({ onLogout }) {
 
   const handleLogout = () => {
     onLogout();
-    toast.success("You have logged out successfully!"); 
     navigate("/login"); 
   };
 
   return (
     <div>
-      <ToastContainer/>
+      {/* <ToastContainer/> */}
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container">
           <a className="navbar-brand" href="#">

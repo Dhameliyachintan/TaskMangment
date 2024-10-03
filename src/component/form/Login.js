@@ -12,7 +12,7 @@ const Login = () => {
 
   const validateForm = () => {
     const errors = {};
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/; 
 
     if (!email.trim()) {
@@ -43,16 +43,17 @@ const Login = () => {
     };
 
     try {
-  
       const response = await axios.get("http://localhost:3000/register");
       const users = response.data; 
 
-     
       const user = users.find((user) => user.email === userdata.email && user.password === userdata.password);
 
       if (user) {
         localStorage.setItem("token", JSON.stringify(user.token)); 
-        navigate("/usertask");
+        toast.success("Login successful!"); 
+        setTimeout(() => {
+          navigate("/usertask");
+        }, 3000);
       } else {
         toast.error("Invalid email or password");
       }
@@ -65,6 +66,7 @@ const Login = () => {
 
   return (
     <div className="container mt-5">
+      <ToastContainer />
       <div className="row justify-content-center">
         <div className="col-md-6">
           <div className="card p-4 rounded">

@@ -13,7 +13,7 @@ const Registration = () => {
   const [errors, setErrors] = useState({});
   const navigate = useNavigate();
 
-  // Function to validate registration form
+ 
   const validateForm = () => {
     const errors = {};
     const nameRegex = /^[a-zA-Z]+(?:\s[a-zA-Z]+)*$/;

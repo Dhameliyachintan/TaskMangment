@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import TaskForm from "./TaskFrom"; 
+import TaskForm from "./TaskFrom";
 import TaskList from "./TaskList";
 import axios from "axios";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-export default function UserTask() {
+export default function UserTask({ userData }) {
   const [tasks, setTasks] = useState([]);
   const [editingTask, setEditingTask] = useState(null);
   const [showModal, setShowModal] = useState(false);
@@ -36,8 +36,15 @@ export default function UserTask() {
 
   const updateTask = async (task) => {
     try {
-      const response = await axios.put(`http://localhost:3000/tasks/${task.id}`, task);
-      setTasks(tasks.map((taskdata) => (taskdata.id === task.id ? response.data : taskdata)));
+      const response = await axios.put(
+        `http://localhost:3000/tasks/${task.id}`,
+        task
+      );
+      setTasks(
+        tasks.map((taskdata) =>
+          taskdata.id === task.id ? response.data : taskdata
+        )
+      );
       setEditingTask(null);
       setShowModal(false);
       toast.success("Task updated successfully!");
@@ -57,26 +64,26 @@ export default function UserTask() {
   };
 
   const handleToggleComplete = (taskId) => {
-    const updatedTasks = tasks.map(task => {
+    const updatedTasks = tasks.map((task) => {
       if (task.id === taskId) {
         return { ...task, completed: !task.completed };
       }
       return task;
     });
     setTasks(updatedTasks);
-    const newCompletedStatus = !tasks.find(task => task.id === taskId).completed;
-    axios.patch(`http://localhost:3000/tasks/${taskId}`, {
-      completed: newCompletedStatus,
-    })
-    .then(response => {
-      console.log('Task updated:', response.data);
-    })
-    .catch(error => {
-      console.error('Error updating task:', error);
-    });
+    const newCompletedStatus = !tasks.find((task) => task.id === taskId)
+      .completed;
+    axios
+      .patch(`http://localhost:3000/tasks/${taskId}`, {
+        completed: newCompletedStatus,
+      })
+      .then((response) => {
+        console.log("Task updated:", response.data);
+      })
+      .catch((error) => {
+        console.error("Error updating task:", error);
+      });
   };
-  
-  
 
   const handleOpenModal = () => {
     setEditingTask(null);
@@ -104,12 +111,12 @@ export default function UserTask() {
         updateTask={updateTask}
         showModal={showModal}
         setShowModal={setShowModal}
-        editingTask={editingTask} 
+        editingTask={editingTask}
       />
 
       <TaskList
         tasks={tasks}
-        handleditTask={editData} 
+        handleditTask={editData}
         handleDeleteTask={handleDeleteTask}
         handleToggleComplete={handleToggleComplete}
       />
